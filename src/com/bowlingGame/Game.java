@@ -5,4 +5,7 @@ package com.bowlingGame;
  */
 public class Game {
 
+    public void roll(int pins) {
+
+    }
 }
