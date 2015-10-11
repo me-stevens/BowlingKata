@@ -51,6 +51,15 @@ public class BowlingGameTest {
         assertEquals(16, game.score());
     }
 
+    @Test
+    public void oneStrike() {
+        game.roll(10); // strike
+        game.roll(3);
+        game.roll(4);
+        rollMany(16, 0);
+        assertEquals(24, game.score());
+    }
+
     private void rollSpare() {
         game.roll(5);
         game.roll(5);
