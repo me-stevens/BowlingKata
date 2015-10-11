@@ -28,6 +28,11 @@ public class BowlingGameTest {
 
     @Test
     public void GutterGame() {
+        int n    = 20;
+        int pins = 0;
+
+        for (int i=0; i<n; i++)
+            game.roll(pins);
 
         assertEquals(0, game.score());
     }
