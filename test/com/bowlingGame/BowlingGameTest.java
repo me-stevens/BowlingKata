@@ -4,9 +4,9 @@
 
 package com.bowlingGame;
 
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 
 public class BowlingGameTest {
     /*
@@ -19,22 +19,23 @@ public class BowlingGameTest {
     assertEquals(expected, actual);
     */
 
+    private Game game;
+
+    @Before
+    public void setUp() {
+        game = new Game();
+    }
+
     @Test
     public void GutterGame() {
-        Game game = new Game();
-        for (int i=0; i<20; i++)
-            game.roll(0);
 
         assertEquals(0, game.score());
     }
 
-
     @Test
     public void AllOnes() {
-        Game game = new Game();
-        for(int i=0; i<20; i++) {
+        for(int i=0; i<20; i++)
             game.roll(1);
-        }
 
         assertEquals(20, game.score());
     }
